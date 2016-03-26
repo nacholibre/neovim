@@ -14,11 +14,14 @@ Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'Valloric/YouCompleteMe'
 "Plugin 'Shougo/neocomplete.vim'
 Plugin 'jelera/vim-javascript-syntax'
+
 Plugin 'lukaszb/vim-web-indent'
 Plugin 'pangloss/vim-javascript'
 Plugin 'evidens/vim-twig'
+
 Plugin 'tpope/vim-surround'
 Plugin 'msanders/snipmate.vim'
+
 " Plugin 'gregsexton/MatchTag'
 " Plugin 'MarcWeber/vim-addon-mw-utils' # ne se znae dali drug plugin ne go izpolzva
 " Plugin 'tomtom/tlib_vim' # ne se znae dali drug plugin ne go izpolzva
