@@ -18,7 +18,13 @@ set bs=2
 let g:loaded_matchparen=1
 set nocursorline
 set nocursorcolumn
+set lazyredraw
 set ttyfast
+
+" Show whitespace in red
+" MUST be inserted BEFORE the colorscheme command
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+au InsertLeave * match ExtraWhitespace /\s\+$/
 
 set t_Co=256
 color wombat256mod
@@ -70,8 +76,3 @@ if &term =~ '256color'
     " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
     set t_ut=
 endif
-
-" Show whitespace in red
-" MUST be inserted BEFORE the colorscheme command
-autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
-au InsertLeave * match ExtraWhitespace /\s\+$/
