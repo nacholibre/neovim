@@ -4,6 +4,7 @@ set ffs=unix
 set autoindent
 set encoding=utf-8
 set cul
+set foldmethod=indent
 
 let g:ycm_key_list_select_completion = []
 
