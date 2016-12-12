@@ -1,4 +1,8 @@
 ## Symfony Snippets Nacholibre
+snippet sfentitytype
+	use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+snippet sftype
+	use Symfony\Component\Form\Extension\Core\Type\${1:value}Type;
 snippet sfaction
 	/**
 	* @route("/test", name="test")
@@ -26,7 +30,7 @@ snippet sfem
 	$em = $this->getDoctrine()->getManager();
 snippet sfrepo
 	$em = $this->getDoctrine()->getManager();
-	$repo = $em->getRepository('Bundle:Repository');
+	$repo = $em->getRepository('AppBundle:${1:value}');
 snippet sfctrl
 	use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 	use Symfony\Bundle\FrameworkBundle\Controller\Controller;

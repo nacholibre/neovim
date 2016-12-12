@@ -2,6 +2,11 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
+
+"Plugin 'Shougo/vimproc'
+"Plugin 'Shougo/unite.vim'
+"Plugin 'm2mdas/phpcomplete-extended'
+
 " Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-pathogen'
 Plugin 'gmarik/Vundle.vim'

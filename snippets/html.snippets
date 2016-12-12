@@ -17,6 +17,23 @@ snippet stylesrc
 	<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" charset="utf-8"`Close()`>${3}
 snippet scriptsrc
 	<script src="${1}.js" type="text/javascript" charset="utf-8"></script>${2}
+snippet inlinescript
+	<script type="text/javascript">
+		${1}
+	</script>
+snippet bstable
+	<table class='table table-bordered'>
+		<thead>
+			<tr>
+				<th>${1}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
 ## Some useful Unicode entities
 ## Non-Breaking Space
 #snippet nbs

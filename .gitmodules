@@ -37,3 +37,15 @@
 [submodule "bundle/fugitive"]
 	path = bundle/fugitive
 	url = http://github.com/tpope/vim-fugitive.git
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/unite.vim"]
+	path = bundle/unite.vim
+	url = https://github.com/Shougo/unite.vim.git
+[submodule "bundle/phpcomplete-extended-symfony"]
+	path = bundle/phpcomplete-extended-symfony
+	url = https://github.com/m2mdas/phpcomplete-extended-symfony
+[submodule "bin/phpcomplete-extended-nacho"]
+	path = bin/phpcomplete-extended-nacho
+	url = git@github.com:nacholibre/phpcomplete-extended.git

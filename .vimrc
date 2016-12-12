@@ -9,4 +9,5 @@ set omnifunc=syntaxcomplete#Complete
 
 runtime vimfiles/settings.vim
 runtime vimfiles/mappings.vim
+"runtime vimfiles/vundle_plugins.vim
 runtime vimfiles/plugins.vim
