@@ -15,8 +15,8 @@ let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 
+let g:phpcomplete_php_binary = "php"
 let g:phpcomplete_index_composer_command = "composer"
-let g:phpcomplete_php_binary = "php56"
 
 let g:ycm_key_invoke_completion = '<C-o>'
 
