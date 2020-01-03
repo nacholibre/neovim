@@ -80,13 +80,11 @@ autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 let g:ycm_autoclose_preview_window_after_completion = 0
 let g:ycm_add_preview_to_completeopt = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
-
-let g:phpcomplete_php_binary = "php"
-let g:phpcomplete_index_composer_command = "composer"
-
 let g:ycm_key_invoke_completion = '<C-o>'
-
 let g:ycm_server_python_interpreter = '/usr/bin/python'
+
+"let g:phpcomplete_php_binary = "php"
+"let g:phpcomplete_index_composer_command = "composer"
 
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
