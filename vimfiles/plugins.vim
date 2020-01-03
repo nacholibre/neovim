@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.config/nvim/plugged')
 "Plug 'php-vim/phpcd.vim', { 'for': 'php' , 'do': 'composer update' }
 "Plug 'qbbr/vim-symfony'
 
@@ -27,6 +27,38 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'phpactor/ncm2-phpactor'
 " phpactor end
+
+
+Plug 'tpope/vim-pathogen'
+Plug 'gmarik/Vundle.vim'
+"Plugin 'bling/vim-airline'
+Plug 'kien/ctrlp.vim'
+Plug 'scrooloose/nerdtree'
+"Plugin 'nvie/vim-flake8'
+Plug 'jistr/vim-nerdtree-tabs'
+"Plugin 'tpope/vim-fugitive'
+Plug 'Valloric/YouCompleteMe'
+"Plugin 'Shougo/neocomplete.vim'
+Plug 'jelera/vim-javascript-syntax'
+
+Plug 'lukaszb/vim-web-indent'
+Plug 'pangloss/vim-javascript'
+Plug 'evidens/vim-twig'
+
+Plug 'tpope/vim-surround'
+Plug 'msanders/snipmate.vim'
+
+" Plugin 'gregsexton/MatchTag'
+" Plugin 'MarcWeber/vim-addon-mw-utils' # ne se znae dali drug plugin ne go izpolzva
+" Plugin 'tomtom/tlib_vim' # ne se znae dali drug plugin ne go izpolzva
+" Plugin 'garbas/vim-snipmate'
+" Plugin 'honza/vim-snippets'
+Plug 'myhere/vim-nodejs-complete'
+" Plugin 'blueyed/vim-diminactive'
+" Plugin 'mattn/emmet-vim' " info https://code.google.com/p/zen-coding/
+Plug 'christoomey/vim-tmux-navigator'
+
+
 call plug#end()
 
 " python3 executable for the ncm2 autocomplete
