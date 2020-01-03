@@ -58,6 +58,7 @@ Plug 'myhere/vim-nodejs-complete'
 " Plugin 'mattn/emmet-vim' " info https://code.google.com/p/zen-coding/
 Plug 'christoomey/vim-tmux-navigator'
 
+Plug 'itchyny/lightline.vim'
 
 call plug#end()
 
@@ -68,12 +69,36 @@ call plug#end()
 " https://github.com/jistr/vim-nerdtree-tabs
 let g:nerdtree_tabs_open_on_console_startup=0
 
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
+      \ }
+
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php setlocal omnifunc=phpactor#Complete
+
+" phpactor config start
+" Include use statement
+nmap <Leader>u :call phpactor#UseAdd()<CR>
+
+" Goto definition of class or class member under the cursor
+nmap <Leader>ot :call phpactor#GotoDefinitionTab()<CR>
+
+" Extract expression (normal mode)
+nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
+
+" Extract expression from selection
+vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
+
+" Extract method from selection
+vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
+" php actor config end
 
 " autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
