@@ -1,5 +1,7 @@
 let mapleader = ","
 
+" let g:python_host_prog = '/usr/local/Cellar/python/2.7.13/bin/python'
+
 set ffs=unix
 set autoindent
 set encoding=utf-8
