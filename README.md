@@ -1,6 +1,6 @@
 `git clone git://github.com/nacholibre/neovim.git ~/.config/nvim`
 
-Install Vim Plug, for NeoVim run
+Install Vim Plug, for NeoVim on MacOS run
 
 ```
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
