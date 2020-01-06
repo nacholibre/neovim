@@ -8,7 +8,7 @@ set encoding=utf-8
 set cul
 set foldmethod=indent
 
-let g:ycm_key_list_select_completion = []
+"let g:ycm_key_list_select_completion = []
 
 " Set 7 lines to the cursor - when moving vertically using j/k
 set so=7

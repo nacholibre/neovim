@@ -37,7 +37,7 @@ Plug 'scrooloose/nerdtree'
 "Plugin 'nvie/vim-flake8'
 Plug 'jistr/vim-nerdtree-tabs'
 "Plugin 'tpope/vim-fugitive'
-Plug 'Valloric/YouCompleteMe'
+"Plug 'Valloric/YouCompleteMe'
 "Plugin 'Shougo/neocomplete.vim'
 Plug 'jelera/vim-javascript-syntax'
 
@@ -63,7 +63,7 @@ Plug 'itchyny/lightline.vim'
 call plug#end()
 
 " python3 executable for the ncm2 autocomplete
-" let g:python3_host_prog=/path/to/python/executable/
+let g:python3_host_prog="/usr/bin/python3"
 
 " Nerdtree: autostart
 " https://github.com/jistr/vim-nerdtree-tabs
@@ -90,23 +90,23 @@ nmap <Leader>u :call phpactor#UseAdd()<CR>
 " Goto definition of class or class member under the cursor
 nmap <Leader>ot :call phpactor#GotoDefinitionTab()<CR>
 
-" Extract expression (normal mode)
-nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
-
-" Extract expression from selection
-vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
-
-" Extract method from selection
-vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
+"" Extract expression (normal mode)
+"nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
+"
+"" Extract expression from selection
+"vmap <silent><Leader>ee :<C-U>call phpactor#ExtractExpression(v:true)<CR>
+"
+"" Extract method from selection
+"vmap <silent><Leader>em :<C-U>call phpactor#ExtractMethod()<CR>
 " php actor config end
 
 " autocmd FileType php setlocal omnifunc=phpcomplete_extended#CompletePHP
 
-let g:ycm_autoclose_preview_window_after_completion = 0
-let g:ycm_add_preview_to_completeopt = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-let g:ycm_key_invoke_completion = '<C-o>'
-let g:ycm_server_python_interpreter = '/usr/bin/python'
+"let g:ycm_autoclose_preview_window_after_completion = 0
+"let g:ycm_add_preview_to_completeopt = 1
+"let g:ycm_autoclose_preview_window_after_insertion = 1
+"let g:ycm_key_invoke_completion = '<C-o>'
+"let g:ycm_server_python_interpreter = '/usr/bin/python'
 
 "let g:phpcomplete_php_binary = "php"
 "let g:phpcomplete_index_composer_command = "composer"
