@@ -19,8 +19,14 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 " ncm2 autocomplete end
 
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
+
 " phpactor start
 Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+
+" php-cs-fixer symfony
+Plug 'stephpy/vim-php-cs-fixer'
 
 " Require ncm2 and this plugin
 Plug 'ncm2/ncm2'
@@ -28,11 +34,21 @@ Plug 'roxma/nvim-yarp'
 Plug 'phpactor/ncm2-phpactor'
 " phpactor end
 
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+" phpdoc plugin
+Plug 'tobyS/vmustache' "plugin needed by pdv
+Plug 'tobyS/pdv'
+Plug 'SirVer/ultisnips' "snippets plugin needed by pdv
+
+" phpdoc modded
+" Plug 'Rican7/php-doc-modded'
 
 Plug 'tpope/vim-pathogen'
 Plug 'gmarik/Vundle.vim'
 "Plugin 'bling/vim-airline'
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 "Plugin 'nvie/vim-flake8'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -61,6 +77,17 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
 
 call plug#end()
+
+let g:ctrlp_map = '<c-r>'
+
+" phpdoc config
+let g:pdv_template_dir = $HOME ."/.config/nvim/plugged/pdv/templates_snip"
+nnoremap <C-p> :call pdv#DocumentWithSnip()<CR>
+
+" other php doc plugin
+" inoremap <C-P> <ESC>:call PhpDocSingle()<CR>i
+" nnoremap <C-P> :call PhpDocSingle()<CR>
+" vnoremap <C-P> :call PhpDocRange()<CR>
 
 " python3 executable for the ncm2 autocomplete
 let g:python3_host_prog="/usr/bin/python3"
