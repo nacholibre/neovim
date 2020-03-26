@@ -48,6 +48,9 @@ nnoremap <A-l> <C-w>l
 " Nerdtree: toggle
 map <C-t> :NERDTreeToggle<CR>
 
+" fzf
+noremap <Leader>fif :Ag<CR>
+noremap <Leader>gf :GFiles<CR>
 
 " dont know what is this
 "nmap \t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
