@@ -4,8 +4,8 @@ call plug#begin('~/.config/nvim/plugged')
 
 " ncm2 autocomplete start
 " assuming you're using vim-plug: https://github.com/junegunn/vim-plug
-Plug 'ncm2/ncm2'
-Plug 'roxma/nvim-yarp'
+" Plug 'ncm2/ncm2'
+" Plug 'roxma/nvim-yarp'
 
 " enable ncm2 for all buffers
 autocmd BufEnter * call ncm2#enable_for_buffer()
@@ -23,7 +23,7 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
 " phpactor start
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '0.14.0'}
 
 " php-cs-fixer symfony
 Plug 'stephpy/vim-php-cs-fixer'
@@ -151,3 +151,9 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " let g:phpcomplete_index_composer_command = 'composer'
+
+" Always enable preview window on the right with 60% width
+let g:fzf_preview_window = 'right:60%'
+
+command! -bang -nargs=? -complete=dir Ag
+    \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
