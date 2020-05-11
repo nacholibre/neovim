@@ -82,6 +82,6 @@ if &term =~ '256color'
     set t_ut=
 endif
 
-" Uncomment for neovim plugin deblug log
+" Uncomment for neovim plugin debug log
 " let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
 " let $NVIM_PYTHON_LOG_LEVEL="DEBUG"
