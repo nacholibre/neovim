@@ -19,6 +19,10 @@ Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
 " ncm2 autocomplete end
 
+" parameter expansion autocomplete ncm2 snippets
+Plug 'ncm2/ncm2-ultisnips'
+Plug 'SirVer/ultisnips'
+
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
@@ -33,6 +37,13 @@ Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
 Plug 'phpactor/ncm2-phpactor'
 " phpactor end
+
+
+" ncm2 autocomplete plugins
+Plug 'ncm2/ncm2-tern',  {'do': 'npm install'} " javascript autocomplete
+Plug 'nacholibre/ncm2-symfony', {'do': 'composer install', 'tag': '*'}
+" Plug 'othree/csscomplete.vim' " css autocomplete
+Plug 'ncm2/ncm2-cssomni' " css autocomplete
 
 " markdown preview
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -154,6 +165,17 @@ let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 " Always enable preview window on the right with 60% width
 let g:fzf_preview_window = 'right:60%'
+
+" ncm2 snippets config
+" Press enter key to trigger snippet expansion
+" The parameters are the same as `:help feedkeys()`
+inoremap <silent> <expr> <CR> ncm2_ultisnips#expand_or("\<CR>", 'n')
+
+" c-j c-k for moving in snippet
+let g:UltiSnipsExpandTrigger		= "<Plug>(ultisnips_expand)"
+let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
+let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
+let g:UltiSnipsRemoveSelectModeMappings = 0
 
 command! -bang -nargs=? -complete=dir Ag
     \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
