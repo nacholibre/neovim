@@ -29,6 +29,9 @@ Plug 'junegunn/fzf.vim'
 " phpactor start
 Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '0.14.0'}
 
+" xcode like theme
+Plug 'arzg/vim-colors-xcode'
+
 " php-cs-fixer symfony
 Plug 'stephpy/vim-php-cs-fixer'
 
@@ -57,6 +60,7 @@ Plug 'SirVer/ultisnips' "snippets plugin needed by pdv
 " Plug 'Rican7/php-doc-modded'
 
 Plug 'tpope/vim-pathogen'
+Plug 'ciaranm/detectindent' " Automaticlly detect file indent style and try to adapt
 Plug 'gmarik/Vundle.vim'
 "Plugin 'bling/vim-airline'
 "Plug 'kien/ctrlp.vim'
@@ -88,6 +92,11 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'itchyny/lightline.vim'
 
 call plug#end()
+
+" Solarized color scheme
+" set background=light
+" let g:solarized_termcolors=256
+colorscheme xcodelighthc
 
 let g:ctrlp_map = '<c-r>'
 

@@ -31,8 +31,8 @@ set ttyfast
 autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
 au InsertLeave * match ExtraWhitespace /\s\+$/
 
-set t_Co=256
-color wombat256mod
+" set t_Co=256
+" color wombat256mod
 
 " Showing line numbers and length
 set number  " show line numbers
@@ -75,12 +75,12 @@ set laststatus=2
 
 set wildmenu
 
-if &term =~ '256color'
-    " disable Background Color Erase (BCE) so that color schemes
-    " render properly when inside 256-color tmux and GNU screen.
-    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
-    set t_ut=
-endif
+"if &term =~ '256color'
+"    " disable Background Color Erase (BCE) so that color schemes
+"    " render properly when inside 256-color tmux and GNU screen.
+"    " see also http://snk.tuxfamily.org/log/vim-256color-bce.html
+"    set t_ut=
+"endif
 
 " Uncomment for neovim plugin debug
 " let $NVIM_PYTHON_LOG_FILE="/tmp/nvim_log"
