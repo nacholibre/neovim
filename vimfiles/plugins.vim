@@ -27,10 +27,16 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
 " phpactor start
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '0.14.0'}
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '0.17.1'}
 
 " xcode like theme
 Plug 'arzg/vim-colors-xcode'
+
+" go lang
+Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
+
+" causes issues
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " php-cs-fixer symfony
 Plug 'stephpy/vim-php-cs-fixer'
@@ -41,6 +47,9 @@ Plug 'roxma/nvim-yarp'
 Plug 'phpactor/ncm2-phpactor'
 " phpactor end
 
+" Quickstart configurations for the Nvim LSP client
+" https://github.com/neovim/nvim-lspconfig
+" Plug 'neovim/nvim-lspconfig'
 
 " ncm2 autocomplete plugins
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'} " javascript autocomplete
@@ -110,7 +119,7 @@ nnoremap <C-p> :call pdv#DocumentWithSnip()<CR>
 " vnoremap <C-P> :call PhpDocRange()<CR>
 
 " python3 executable for the ncm2 autocomplete
-let g:python3_host_prog="/usr/bin/python3"
+" let g:python3_host_prog="/usr/bin/python3"
 
 " Nerdtree: autostart
 " https://github.com/jistr/vim-nerdtree-tabs
@@ -135,7 +144,7 @@ autocmd FileType php setlocal omnifunc=phpactor#Complete
 nmap <Leader>u :call phpactor#UseAdd()<CR>
 
 " Goto definition of class or class member under the cursor
-nmap <Leader>ot :call phpactor#GotoDefinitionTab()<CR>
+nmap <Leader>ot :call phpactor#GotoDefinition('tabnew')<CR>
 
 "" Extract expression (normal mode)
 "nmap <silent><Leader>ee :call phpactor#ExtractExpression(v:false)<CR>
@@ -185,6 +194,14 @@ let g:UltiSnipsExpandTrigger		= "<Plug>(ultisnips_expand)"
 let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
 let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
 let g:UltiSnipsRemoveSelectModeMappings = 0
+
+" phpactor bin config
+let g:phpactorPhpBin = "/usr/local/Cellar/php@7.4/7.4.23/bin/php"
+
+" Enable phpactor
+" lua << EOF
+" require'lspconfig'.phpactor.setup{}
+" EOF
 
 command! -bang -nargs=? -complete=dir Ag
     \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
