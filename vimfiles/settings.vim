@@ -8,6 +8,9 @@ set encoding=utf-8
 set cul
 set foldmethod=indent
 
+" https://stackoverflow.com/a/78522013/1047510
+set notermguicolors
+
 "let g:ycm_key_list_select_completion = []
 
 " Set 7 lines to the cursor - when moving vertically using j/k
@@ -44,7 +47,6 @@ set autoread autowrite
 set colorcolumn=80
 highlight ColorColumn ctermbg=233
 
-
 " Useful settings
 set history=700
 set undolevels=700
@@ -74,6 +76,9 @@ set noswapfile
 set laststatus=2
 
 set wildmenu
+
+" prevent huge slow downs from syntax highlighting
+set synmaxcol=2048
 
 "if &term =~ '256color'
 "    " disable Background Color Erase (BCE) so that color schemes

@@ -27,10 +27,15 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
 " phpactor start
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '0.17.1'}
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '2023.09.24'}
+" let g:phpactorPhpBin = "/opt/homebrew/opt/php@8.1/bin/php"
+" let g:phpactorbinpath = "/opt/homebrew/opt/php@8.1/bin/php"
 
 " xcode like theme
 Plug 'arzg/vim-colors-xcode'
+
+" new color scheme
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " go lang
 Plug 'darrikonn/vim-gofmt', { 'do': ':GoUpdateBinaries' }
@@ -53,12 +58,12 @@ Plug 'phpactor/ncm2-phpactor'
 
 " ncm2 autocomplete plugins
 Plug 'ncm2/ncm2-tern',  {'do': 'npm install'} " javascript autocomplete
-Plug 'nacholibre/ncm2-symfony', {'do': 'composer install', 'tag': '*'}
+" Plug 'nacholibre/ncm2-symfony', {'do': 'composer install', 'tag': '*'}
 " Plug 'othree/csscomplete.vim' " css autocomplete
 Plug 'ncm2/ncm2-cssomni' " css autocomplete
 
 " markdown preview
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
 " phpdoc plugin
 Plug 'tobyS/vmustache' "plugin needed by pdv
@@ -106,6 +111,8 @@ call plug#end()
 " set background=light
 " let g:solarized_termcolors=256
 colorscheme xcodelighthc
+
+" colorscheme tokyonight-day
 
 let g:ctrlp_map = '<c-r>'
 
@@ -196,7 +203,7 @@ let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
 let g:UltiSnipsRemoveSelectModeMappings = 0
 
 " phpactor bin config
-let g:phpactorPhpBin = "/usr/local/Cellar/php@7.4/7.4.23/bin/php"
+"let g:phpactorPhpBin = "/opt/homebrew/opt/php@7.4/bin/php"
 
 " Enable phpactor
 " lua << EOF
