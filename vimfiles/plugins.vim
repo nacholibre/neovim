@@ -27,7 +27,7 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 
 " phpactor start
-Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '2023.09.24'}
+Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php', 'tag': '2024.11.05.0'}
 " let g:phpactorPhpBin = "/opt/homebrew/opt/php@8.1/bin/php"
 " let g:phpactorbinpath = "/opt/homebrew/opt/php@8.1/bin/php"
 
